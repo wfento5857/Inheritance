@@ -1,4 +1,14 @@
 #BlueJ class context
 comment0.target=Volleyball
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Volleyball\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-numComments=1
+comment1.params=n\ s\ st\ g\ p\ a\ w\ ace\ kill\ dig\ blo
+comment1.target=Volleyball(java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ int,\ int,\ int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=double\ killsPerGame()
+comment3.params=
+comment3.target=double\ blocksPerGame()
+comment4.params=
+comment4.target=double\ savesPerGame()
+comment5.params=
+comment5.target=double\ acesPerGame()
+numComments=6

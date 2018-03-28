@@ -1,4 +1,12 @@
 #BlueJ class context
 comment0.target=Basketball
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Basketball\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-numComments=1
+comment1.params=n\ s\ st\ g\ p\ a\ w\ d\ f\ hft\ three
+comment1.target=Basketball(java.lang.String,\ java.lang.String,\ int,\ int,\ int,\ int,\ int,\ int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=double\ freeThrowPercentage()
+comment3.params=
+comment3.target=double\ dunkRate()
+comment4.params=
+comment4.target=int\ pointsPerSeason()
+numComments=5
