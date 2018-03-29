@@ -27,4 +27,15 @@ public class Basketball extends Sports
         int totalPts = (twos*2) + (threes*3) + hitfreethrows;
         return totalPts;
     }   
+    public String toString()
+    {
+        String a = "Free throw Percentage: " + freeThrowPercentage() + "\n";
+        String b = "Dunk Rate: " + dunkRate() + "\n";
+        String c = "Points per season: " + pointsPerSeason() + "\n";
+        String d  = "Shots per game: " + shotsPerGame() + "\n";
+        String e = "Accuracy: " + accuracy() + "%\n";
+        String f = "Win Rate: " + winRate() + "\n";
+        String g = "Start Rate: " + startRate() + "\n";
+        return a + b + c + d + e + f + g;
+    }
 }

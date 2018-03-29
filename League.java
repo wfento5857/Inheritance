@@ -37,7 +37,7 @@ public class League extends Sports
     }
     public double KPGame(){
         return (kills+assists)/games;
-    }
+     }
     public toString(){
         
     }
