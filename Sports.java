@@ -26,14 +26,17 @@ abstract class Sports
     }
     public double accuracy(){
         double avg = shots/attempts;
+        avg = avg*100;
         return avg;
     }
     public double winRate(){
         double avg = wins/games;
+        avg = avg*100;
         return avg;
     }
     public double startRate(){
         double avg = starts/games;
+        avg = avg*100;
         return avg;
     }
 }

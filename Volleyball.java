@@ -27,5 +27,15 @@ public class Volleyball extends Sports
     public double acesPerGame(){
         return aces/games;
     }   
-    
+    public String toString(){
+        String e = "Shots per game: " + shotsPerGame() + "%\n";
+        String f = "Point accuracy: " + accuracy() + "%\n";
+        String g = "Win rate: " + winRate() + "%\n";
+        String h = "Starting rate: " + startRate() + "%\n";
+        String a = "Kills per game: " + killsPerGame() + "\n";
+        String b = "Blocks per game: " + blocksPerGame() + "\n";
+        String c = "Saves per game: " +  savesPerGame() + "\n";
+        String d = "Aces per game: " + acesPerGame() + "\n";
+        return e+f+g+h+a+b+c+d;
+    }
 }

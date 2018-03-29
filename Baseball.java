@@ -22,6 +22,7 @@ public class Baseball extends Sports
     }
     public double battingAvg(){
         double avg = hits/atBats;
+        avg = avg*100;
         return avg;
     }
     public double catchesPerGame(){
@@ -40,7 +41,20 @@ public class Baseball extends Sports
         return steals/games;
     }
     public double basePercentage(){
-        return (hits + walks)/atBats;
+        return ((hits + walks)/atBats)*100;
     }
-    
+    public String toString(){
+        String a = "Batting average: " + battingAvg() + "\n";
+        String b = "Catches per game: " + catchesPerGame() + "\n";
+        String c = "Triples per game: " + triplesPerGame() + "\n";
+        String d = "Doubles per game: " + doublesPerGame() + "\n";
+        String e = "Home runs per game: " + homersPerGame() + "\n";
+        String f = "Bases stolen per game: " + stealsPerGame() + "\n";
+        String g = "Percentage of how many times you get on base per at bat: " + basePercentage() + "%\n";
+        String h = "Shots per game: " + shotsPerGame() + "%\n";
+        String i = "Point accuracy: " + accuracy() + "%\n";
+        String j = "Win rate: " + winRate() + "%\n";
+        String k = "Starting rate: " + startRate() + "%\n";
+        return h+i+j+k+a+b+c+d+e+f+g;
+    }
 }
