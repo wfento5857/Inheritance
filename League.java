@@ -39,6 +39,7 @@ public class League extends Sports
         return (kills+assists)/games;
      }
     public String toString(){
+        String zero = "Statistics for " + name + " playing " + sport + "\n";
         String a = "Win rate: " + winRate() + "%\n";
         String b = "Starting rate: " + startRate() + "%\n";
         String c = "Kills per game: " + killsPerGame() + "\n";
@@ -48,6 +49,6 @@ public class League extends Sports
         String g = "Average assists per game: " + assistsPerGame() + "\n";
         String h = "Average outplays per game: " + outplaysPerGame() + "\n";
         String i = "Average kill participation per game: " + KPGame() + "\n";
-        return a+b+c+d+e+f+g+h+i;
+        return zero+a+b+c+d+e+f+g+h+i;
     }
 }

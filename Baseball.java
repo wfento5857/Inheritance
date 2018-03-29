@@ -44,6 +44,7 @@ public class Baseball extends Sports
         return ((hits + walks)/atBats)*100;
     }
     public String toString(){
+        String zero = "Statistics for " + name + " playing " + sport + "\n";
         String a = "Batting average: " + battingAvg() + "\n";
         String b = "Catches per game: " + catchesPerGame() + "\n";
         String c = "Triples per game: " + triplesPerGame() + "\n";
@@ -55,6 +56,6 @@ public class Baseball extends Sports
         String i = "Point accuracy: " + accuracy() + "%\n";
         String j = "Win rate: " + winRate() + "%\n";
         String k = "Starting rate: " + startRate() + "%\n";
-        return h+i+j+k+a+b+c+d+e+f+g;
+        return zero+h+i+j+k+a+b+c+d+e+f+g;
     }
 }
