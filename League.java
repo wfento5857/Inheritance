@@ -38,7 +38,16 @@ public class League extends Sports
     public double KPGame(){
         return (kills+assists)/games;
      }
-    public toString(){
-        
+    public String toString(){
+        String a = "Win rate: " + winRate() + "%\n";
+        String b = "Starting rate: " + startRate() + "%\n";
+        String c = "Kills per game: " + killsPerGame() + "\n";
+        String d = "Average Kill/Death ratio: " + avgKD() + "\n";
+        String e = "Average farm per game: " + farmPerGame() + "\n";
+        String f = "Average damage per game: " + damagePerGame() + "\n";
+        String g = "Average assists per game: " + assistsPerGame() + "\n";
+        String h = "Average outplays per game: " + outplaysPerGame() + "\n";
+        String i = "Average kill participation per game: " + KPGame() + "\n";
+        return a+b+c+d+e+f+g+h+i;
     }
 }
