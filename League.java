@@ -7,8 +7,8 @@
  */
 public class League extends Sports
 {
-    int kills, deaths, assists, towers, totalDamage, outplays, farm;
-    public League(String n, String s, int st, int g, int p, int a, int w, int k, int d, int as, int to, int tot, int out, int cs){
+    int kills, deaths, assists, totalDamage, outplays, farm;
+    public League(String n, String s, int st, int g, int p, int a, int w, int k, int d, int as,  int tot, int out, int cs){
         super(n,s,st,g,p,a,w);
         kills = k;
         deaths = d;

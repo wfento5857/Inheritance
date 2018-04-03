@@ -90,6 +90,28 @@ public class Driver
                     System.out.println("How many blocks?");
                     int blocks = input.nextInt();
                     input.nextLine();
+                    System.out.println(new Volleyball(name,sport,starts,games,shots,attempts,wins,aces, kills,digs,blocks));
+                }
+                else if (sport.equalsIgnoreCase("league")){
+                    System.out.println("How many kills did you get?");
+                    int kills = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many times did you die?");
+                    int deaths = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many assists did you get?");
+                    int assists = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How much damage did you do?");
+                    int totalDamage = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How much outplays did you have?");
+                    int outplays = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How much farm did you have?");
+                    int farm = input.nextInt();
+                    input.nextLine();
+                    System.out.println(new League(name,sport,starts,games,shots,attempts,wins,kills, deaths, assists, totalDamage, outplays, farm));
                 }
                 check = false;
             }
