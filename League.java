@@ -1,54 +1,124 @@
 
 /**
- * Write a description of class League here.
+ * Write a description of class Driver here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class League extends Sports
+import java.util.Scanner;
+public class Driver
 {
-    int kills, deaths, assists, totalDamage, outplays, farm;
-    public League(String n, String s, int st, int g, int p, int a, int w, int k, int d, int as,  int tot, int out, int cs){
-        super(n,s,st,g,p,a,w);
-        kills = k;
-        deaths = d;
-        assists = as;
-        totalDamage = tot;
-        outplays = out;
-        farm = cs;
-    }
-    public double killsPerGame(){
-        return kills/games;
-    }
-    public double avgKD(){
-        return kills/deaths;
-    }
-    public double farmPerGame(){
-        return farm/games;
-    }
-    public double damagePerGame(){
-        return totalDamage/games;
-    }
-    public double assistsPerGame(){
-        return assists/games;
-    }
-    public double outplaysPerGame(){
-        return outplays/games;
-    }
-    public double KPGame(){
-        return (kills+assists)/games;
-     }
-    public String toString(){
-        String zero = "Statistics for " + name + " playing " + sport + "\n";
-        String a = "Win rate: " + winRate() + "%\n";
-        String b = "Starting rate: " + startRate() + "%\n";
-        String c = "Kills per game: " + killsPerGame() + "\n";
-        String d = "Average Kill/Death ratio: " + avgKD() + "\n";
-        String e = "Average farm per game: " + farmPerGame() + "\n";
-        String f = "Average damage per game: " + damagePerGame() + "\n";
-        String g = "Average assists per game: " + assistsPerGame() + "\n";
-        String h = "Average outplays per game: " + outplaysPerGame() + "\n";
-        String i = "Average kill participation per game: " + KPGame() + "\n";
-        return zero+a+b+c+d+e+f+g+h+i;
+    public static void main (String args[]){
+        Scanner input = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name = input.nextLine();
+        boolean check = true;
+        while (check){
+            System.out.println("What is your sport (Basketball, volleyball, baseball, League of Legends)");
+            String sport = input.nextLine();
+            if (sport.equalsIgnoreCase("Basketball") || sport.equalsIgnoreCase("volleyball") || sport.equalsIgnoreCase("baseball") || sport.equalsIgnoreCase("League of Legends")){
+                System.out.println("How many games did you start in?");
+                int starts = input.nextInt();
+                input.nextLine();
+                System.out.println("How many games were there total?");
+                int games = input.nextInt();
+                input.nextLine();
+                System.out.println("How many shots/points did you make?");
+                int shots = input.nextInt();
+                input.nextLine();
+                System.out.println("How many attempted points did you shoot?");
+                int attempts = input.nextInt();
+                input.nextLine();
+                System.out.println("How many games did you win?");
+                int wins = input.nextInt();
+                input.nextLine();
+                if (sport.equalsIgnoreCase("Basketball")){
+                    System.out.println("How many free throws did you shoot?");
+                    int frees = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many free throws did you land?");
+                    int hft = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many three pointers did you land?");
+                    int threes = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many dunks did you land?");
+                    int dunk = input.nextInt();
+                    input.nextLine();
+                    System.out.println(new Basketball(name,sport,starts,games,shots,attempts,wins, dunk, frees,hft,threes));
+                }
+                else if (sport.equalsIgnoreCase("Baseball")){
+                    System.out.println("How many hits did you make?");
+                    int hits = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many doubles did you make?");
+                    int doubles = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many triples did you make?");
+                    int triples = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many steals did you make?");
+                    int steals = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many home runs did you hit?");
+                    int homers = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many strikeouts?");
+                    int strikeouts = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many catches did you make?");
+                    int catches = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many at bats?");
+                    int atB = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many walks?");
+                    int walks = input.nextInt();
+                    input.nextLine();
+                    System.out.println(new Baseball(name,sport,starts,games,shots,attempts,wins,hits,doubles,triples,steals,homers,strikeouts,catches,atB,walks)); 
+                }
+                else if (sport.equalsIgnoreCase("volleyball")){
+                    System.out.println("How many aces?");
+                    int aces = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many kills?");
+                    int kills = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many digs?");
+                    int digs = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many blocks?");
+                    int blocks = input.nextInt();
+                    input.nextLine();
+                    System.out.println(new Volleyball(name,sport,starts,games,shots,attempts,wins,aces, kills,digs,blocks));
+                }
+                else if (sport.equalsIgnoreCase("league of legends")){
+                    System.out.println("How many kills did you get?");
+                    int kills = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many times did you die?");
+                    int deaths = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How many assists did you get?");
+                    int assists = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How much damage did you do?");
+                    int totalDamage = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How much outplays did you have?");
+                    int outplays = input.nextInt();
+                    input.nextLine();
+                    System.out.println("How much farm did you have?");
+                    int farm = input.nextInt();
+                    input.nextLine();
+                    System.out.println(new League(name,sport,starts,games,shots,attempts,wins,kills, deaths, assists, totalDamage, outplays, farm));
+                }
+                check = false;
+            }
+            else{
+                System.out.println("Try again! Incorrect input.");
+            }
+        }
+
     }
 }
